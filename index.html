@@ -99,34 +99,36 @@ p{margin:8px 0}ul{padding-left:24px;margin:8px 0}hr{border:0;border-top:1px soli
 </main>
 <div id="pop" hidden><div class="pb"><div class="pt" id="pt"></div><div class="pc" id="pc">닫기</div></div></div>
 <script>
-/* ═════════════ 여기 수정하기 ═════════════ */
 const CONFIG = {
-  color: "#4bc9c4",            // 테마 색 (정보 상자·상단 틀)
-  navColor: "#f09091",         // 캐릭터 이름표·그룹 제목줄 색
-  navCols: 4,                  // 상단 틀에서 한 줄에 보일 캐릭터 수 (기본이에요)
-  navOpen: false,              // true 면 상단 틀이 처음부터 펼쳐진 상태
-  imgDir: "image/",            // 이미지 폴더 이름. 파일명만 적으면 이 폴더에서 찾아요. (폴더 없이 쓰려면 "" 로 비우세요)
-  smallParen: true,            // 정보 상자 값의 (괄호) 안 글씨를 작게 보여줘요 (false 면 끔)
+  color: "#4bc9c4",          
+  navColor: "#f09091",       
+  navCols: 4,              
+  navOpen: false,            
+  imgDir: "image/",           
+  smallParen: true,           
+ /* ═════════════ 여기 수정하기 ═════════════ */
   title: "천의소",                   // 문서 제목 (캐릭터 이름을 써요)
   date: "2026-12-31 00:12:31",                    // 최근 수정 시각 (예: 2026-12-31 00:12:31)
-  cats: ["온더훅"],                    // 분류 (예: ["온더훅","캐릭터"])
+ /* ═════════════ 여기까지! ═════════════ */
+  cats: ["온더훅"],                   
 
   logo: "",                    // 로고 이미지 경로 (비우면 기본 물고기 로고) — 상단 틀·정보 상자·공략표에 같이 쓰여요
   showLogo: true,              // false 면 로고를 모두 숨겨요
   logoText: "ON THE HOOK",     // 로고 아래 작은 글자
 
-  // 상단 틀: [그룹이름, [[캐릭터], [캐릭터]]  (펼치기·접기 가능)
+ /* ═════════════ 여기 수정하기 ═════════════ */
+  // 상단 틀: [그룹이름, [[캐릭터], [캐릭터]] (캐릭터를 추가해요)
   // 캐릭터 한 명: ["이름","사진.png"]  예) ["도위","doui.png"]
   navGroups: [
     ["공략 캐릭터", [["이사리","sari.jpeg"], ["도위","doui.png"], ["선우스레","sure.png"], ["선우서래","seorae.png"], ["배추민","baechu.png"], ["최신","sin.png"], ["사이단","idan.png"], ["박춘남","haruo.png"], [",","comma.png"], ["장희빈","huibin.png"], ["국민수","minsu.png"], ["리안 퀴니코스","lian.png"], ["문세평","moon.png"], ["국민지","minji.png"], ["반반희","bani.png"], ["천의소","uiso.png"]]],
-    ["비공략 캐릭터", [["버린물고기","fish.png"], ["오뚝이","oddook.png"], ["송도끼","dokki.png"], ["연서복","seobok.png"], ["핑패아가씨","lady.png"], ["인생봇","bot.png"], ["이재진","nego.png"], ["온더택배","box.png"]]]
+    ["비공략 캐릭터", [["버린물고기","fish.png"], ["오뚝이","oddook.png"], ["송도끼","dokki.png"], ["연서복","seobok.png"], ["핑패아가씨","lady.png"], ["인생봇","bot.png"], ["이재진","nego.png"], ["온더택배","box.jpg"]]]
   ],
 
   // 정보 상자
   info: {
     name: "천의소",                  // 캐릭터 이름
-    img: "uiso.png",                   // 대표 이미지(일러스트, 프로필 사진 등) 경로 (예: "uiso.png")
-    moreLabel: "공식프로필 더보기", // 여닫기 되는 곳(프로필 사진용)!! (비우면 숨김)
+    img: "uiso.png",                   // 대표 이미지(일러스트, 프로필 사진 등) 경로
+    moreLabel: "공식프로필 더보기", // 여닫기 되는 곳 (프로필 사진용)!! (비우면 숨김)
     moreImg: "",               // 위 사진에 일러스트를 넣었다면 프로필 사진을 여기에!
     rows: [                    // ["항목","값"]  값에는 [[링크]], [* 각주] 사용 가능
       ["나이", "23세"],
