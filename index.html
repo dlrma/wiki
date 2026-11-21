@@ -76,7 +76,7 @@ blockquote{margin:14px 0;padding:20px 16px;background:#ececec;border:2px dashed 
 .hd{display:flex;align-items:center;gap:7px;cursor:pointer;margin:24px 0 8px;border-bottom:1px solid var(--bd);padding-bottom:5px;font-weight:700}
 h2.hd{font-size:22px}h3.hd{font-size:18px}h4.hd{font-size:16px}
 .n{color:var(--lk)}.ed{margin-left:auto;font-size:12px;font-weight:700;color:var(--lk)}
-p{margin:8px 0}ul{padding-left:24px;margin:12px 0}hr{border:0;border-top:1px solid var(--bd)}s{color:#999}
+p{margin:8px 0}ul{padding-left:24px;margin:12px 0}hr{border:0;border-top:1px solid var(--bd)}s{color:#999}s{cursor:pointer}s.off{text-decoration:none}
 .bi{max-width:100%;border-radius:4px;display:block;margin:10px 0}sup a{font-size:12px}
 .fn{border-top:1px solid #777;margin-top:28px;padding-top:10px}.fn>div{margin:8px 0}.fn a{margin-right:6px}
 @media(min-width:720px){.head{flex-direction:row-reverse;gap:20px;align-items:flex-start}.side{width:420px;flex:none}.mainc{flex:1;min-width:0}}
@@ -245,6 +245,7 @@ if(show){tog();const h=el.scrollHeight;s.height="0";el.offsetHeight;s.transition
 else{s.height=el.scrollHeight+"px";el.offsetHeight;s.transition="height .15s";s.height="0"}
 setTimeout(()=>{if(!show)tog();s.height=s.overflow=s.transition="";el._b=0},160)}
 document.addEventListener("click",e=>{const t=e.target;let x;
+const so=t.closest("s");document.querySelectorAll("s.off").forEach(q=>{if(q!==so)q.classList.remove("off")});if(so)so.classList.toggle("off");
 if(x=t.closest(".fr")){e.preventDefault();const n=+x.dataset.n;$("pt").innerHTML=`<a class="pn" data-go="f${n}">[${FL[n-1]}]</a>${F[n-1]}`;$("pop").hidden=false}
 else if(x=t.closest("[data-go]")){$("pop").hidden=true;$(x.dataset.go).scrollIntoView({block:"center"})}
 else if(t.id==="pop"||t.closest("#pc"))$("pop").hidden=true;
